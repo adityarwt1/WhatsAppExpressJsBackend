@@ -20,7 +20,7 @@ const ChatSchema = new mongoose.Schema(
     },
     lastInteraction: {
       type: Number,
-      default: "Today",
+      default: new Date().getTime(),
     },
     lastMessage: {
       type: String,
@@ -48,7 +48,7 @@ const ChatSchema = new mongoose.Schema(
     },
     unread2: {
       type: Number,
-      required: true,
+      default: 0,
     },
   },
   { timestamps: true }
