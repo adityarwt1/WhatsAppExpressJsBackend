@@ -9,11 +9,18 @@ const MessageSchema = new mongoose.Schema({
     required: true,
   },
   sendAt: {
-    type: String,
+    type: Number,
+    default: new Date().getTime(),
   },
   uid: {
     type: String,
     required: true,
+  },
+  image: {
+    type: String,
+  },
+  imageText: {
+    type: String,
   },
 });
 

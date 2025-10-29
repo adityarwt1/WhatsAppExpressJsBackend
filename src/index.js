@@ -27,7 +27,7 @@ app.use("/api/v1/chat", chatRoute);
 app.use("/api/v1/read", readRout);
 app.use("/api/v1/getCurrentChat", currentChat);
 app.use("/api/v1/user", userRoute);
-
+app.use("/api/v1/sendMessage" )
 /// socket io connection
 const server = http.createServer(app);
 export const io = new Server(server, {
