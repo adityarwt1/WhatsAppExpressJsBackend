@@ -17,6 +17,6 @@ const port = process.env.PORT;
 app.use(express.json());
 app.use(cookieParser());
 app.use("/api/v1/signin", signroute);
-app.use("/api/v1/addChat", chatRoute);
+app.use("/api/v1/chat", chatRoute);
 
 app.listen(port);
