@@ -6,7 +6,7 @@
 import express from "express";
 import { config } from "dotenv";
 import cookieParser from "cookie-parser";
-import signroute from "./routes/signin.route.js";
+import signupRoute from "./routes/chat.route.js";
 import chatRoute from "./routes/chat.route.js";
 import readRout from "./routes/read.route.js";
 import currentChat from "./routes/currentchat.route.js";
@@ -21,7 +21,7 @@ const port = process.env.PORT;
 //middlewares
 app.use(express.json());
 app.use(cookieParser());
-app.use("/api/v1/signin", signroute);
+app.use("/api/v1/signup", signupRoute);
 app.use("/api/v1/chat", chatRoute);
 app.use("/api/v1/read", readRout);
 app.use("/api/v1/getCurrentChat", currentChat);

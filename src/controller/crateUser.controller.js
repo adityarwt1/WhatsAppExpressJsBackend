@@ -1,14 +1,12 @@
-/**
- * @param {import("express").Request} req
- * @param {import("express").Response} res
- */
-import { Router } from "express";
 import { connectDb } from "../lib/mongodb.js";
 import User from "../models/User.js";
 import jsonwebtoken from "jsonwebtoken";
-const router = Router();
-
-router.post("/", async (req, res) => {
+/**
+ *
+ * @param {import("express").Request} req
+ * @param {import("express").Response} res
+ */
+export async function createUser(req, res) {
   try {
     const { email, photoURL, fullName, uid } = req.body;
 
@@ -49,6 +47,4 @@ router.post("/", async (req, res) => {
     console.log(error);
     return res.json({ error: error.message }).status(500);
   }
-});
-
-export default router;
+}
