@@ -21,6 +21,7 @@ const port = process.env.PORT;
 //middlewares
 app.use(express.json());
 app.use(cookieParser());
+app.use("/api/v1/signin");
 app.use("/api/v1/signup", signupRoute);
 app.use("/api/v1/chat", chatRoute);
 app.use("/api/v1/read", readRout);
