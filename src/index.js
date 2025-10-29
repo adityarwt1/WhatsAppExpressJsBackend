@@ -20,5 +20,6 @@ app.use(cookieParser());
 app.use("/api/v1/signin", signroute);
 app.use("/api/v1/chat", chatRoute);
 app.use("/api/v1/read", readRout);
+app.use("/api/v1/getCurrentChat" )
 
 app.listen(port);
