@@ -29,7 +29,6 @@ app.use("/api/v1/user", userRoute);
 
 /// socket io connection
 const server = http.createServer(app);
-//using the io
 export const io = new Server(server, {
   cors: {
     origin: "*",
